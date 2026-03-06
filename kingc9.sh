@@ -97,6 +97,7 @@ print_message "$YELLOW" "⚙️ Step 5: Configuring Cloud9..."
 sudo docker exec "$CONTAINER_NAME" bash -c "
   apt update -y &&
   apt upgrade -y &&
+  apt install -y wget curl php-cli php-curl python3 python3-pip &&
   apt install -y wget curl php-cli php-curl &&
   curl -fsSL https://deb.nodesource.com/setup_16.x | bash - &&
   apt install -y nodejs &&
